@@ -29,6 +29,10 @@
   background: linear-gradient(320deg, #818cf87a, white);
 }
 
+.gradient-2 {
+  background: linear-gradient(45deg, #d4ad72, #c4bea5);
+}
+
 .button-shadow:hover {
   box-shadow: 0 0 5px 1px white;
 }
@@ -68,4 +72,17 @@
 
 .hidden-right {
   transform: translateX(100vw);
+}
+
+#social {
+  fill: rgb(67 56 202);
+}
+
+.progress-bar {
+  height: 2px;
+  width: 2px;
+  background-color: #4f569e;
+  transform-origin: 0%;
+  margin-left: auto;
+  margin-right: auto;
 }

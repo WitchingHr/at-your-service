@@ -6,9 +6,9 @@ import sixteen from "../assets/img_16.jpeg";
 
 const Services: FC = () => {
 	return (
-		<section className="overflow-hidden bg-indigo-100">
+		<section className="overflow-hidden gradient-2">
 			<div className="flex flex-col justify-center gap-6 !py-16 section-container">
-				<h2 className="text-4xl font-medium text-indigo-400 text-shadow">
+				<h2 className="text-4xl font-medium text-white text-shadow">
 					Our Services
 				</h2>
 
