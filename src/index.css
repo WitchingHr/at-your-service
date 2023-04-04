@@ -13,6 +13,59 @@
   text-shadow: 1px 1px 2px #4f569e;
 }
 
+.button-shadow-blue {
+  box-shadow: 1px 1px 2px #4f569e;
+}
+
+.wrap-gradient {
+  background: linear-gradient(180deg, white, #ffffffbd 40%, transparent );
+}
+
+.solid-white {
+  background-color: white !important;
+}
+
 .gradient {
   background: linear-gradient(320deg, #818cf87a, white);
+}
+
+.button-shadow:hover {
+  box-shadow: 0 0 5px 1px white;
+}
+
+.image-normal {
+  transform: scale(0.8);
+  transition: 0.3s;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px 0px #565656a6;
+}
+
+.image-normal:hover {
+  transform: scale(0.9);
+}
+
+.image-selected {
+  transform: scale(1.2) !important;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.form-shadow {
+  box-shadow: 0px -1px 4px #00000033;
+}
+
+.service-shadow {
+  box-shadow: 2px 2px 4px #848484;
+}
+
+.h3-shadow {
+  text-shadow: 1px 2px #8d8c8c;
+}
+
+.hidden-left {
+  transform: translateX(-100vw);
+}
+
+.hidden-right {
+  transform: translateX(100vw);
 }
