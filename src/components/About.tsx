@@ -34,7 +34,10 @@ const About: FC = () => {
 							Vero, rerum nihil sed labore quidem sint autem nisi ipsa commodi?
 							Quibusdam, similique reprehenderit.
 						</p>
-						<p className="text-lg text-right">- Allison Thomas</p>
+						<div>
+							<p className="text-lg text-right">- Allison Thomas</p>
+							<p className="italic text-right text-md">Founder, AT Your Service</p>
+						</div>
             <div className="flex h-10 gap-2">
               <a href="" className="ml-auto">
                 <svg width="100%" height="100%" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">

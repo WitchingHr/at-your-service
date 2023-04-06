@@ -77,12 +77,3 @@
 #social {
   fill: rgb(67 56 202);
 }
-
-.progress-bar {
-  height: 2px;
-  width: 2px;
-  background-color: #4f569e;
-  transform-origin: 0%;
-  margin-left: auto;
-  margin-right: auto;
-}
