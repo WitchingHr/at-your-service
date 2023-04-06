@@ -46,15 +46,15 @@ export const addJob = async (data: FormData) => {
   };
 
   // const snapshot = await jobsRef.where(;
-  const q = query(collection(db, "jobs"), where('timestamp', '>=', Timestamp.now().toDate() - 86400000));
+  const q = query(collection(db, "jobs"), where('timestamp', '>=', Number(Timestamp.now().toDate()) - 86400000));
   const querySnapshot = await getDocs(q);
+  console.log(querySnapshot)
 
 
   if (querySnapshot.size >= 20) {
     throw new Error, 'Cannot add more than 20 jobs in a 24-hour period';
   }
 
-  const newJob = await addDoc(jobsRef, newJobData);
+  await addDoc(jobsRef, newJobData);
   localStorage.setItem('requestCooldown', Date.now().toString());
-  console.log(JSON.stringify(localStorage.getItem('requestCooldown')));
 };

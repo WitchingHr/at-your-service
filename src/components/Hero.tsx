@@ -1,5 +1,5 @@
 import React, { FC, useRef } from "react";
-import { motion, useInView, useScroll } from "framer-motion";
+import { useInView } from "framer-motion";
 
 import heroImage from "../assets/hero-rev.jpg";
 
@@ -19,7 +19,6 @@ const Hero: FC = () => {
 			className="hero"
 			style={{
 				backgroundImage: `url(${heroImage})`,
-				// backgroundSize: `${100 + scrollY / 15}%`,
 				backgroundSize: "cover",
 				backgroundPosition: "center",
 			}}
