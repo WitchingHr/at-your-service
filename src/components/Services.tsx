@@ -7,12 +7,12 @@ import sixteen from "../assets/img_16.jpeg";
 const Services: FC = () => {
 	return (
 		<section className="overflow-hidden gradient-2">
-			<div className="flex flex-col justify-center gap-6 !py-16 section-container">
-				<h2 className="text-4xl font-medium text-white text-shadow">
+			<div className="flex flex-col justify-center gap-6 !pt-8 !pb-10 md:!py-16 section-container">
+				<h2 className="text-3xl font-medium text-center text-white md:mb-6 sm:text-left sm:text-4xl text-shadow">
 					Our Services
 				</h2>
 
-				<div className="flex items-center">
+				<div className="flex flex-col items-center md:flex-row">
 					<SlideInFromLeftWhenVisible>
 						<div className="flex flex-col gap-3 py-10 bg-indigo-300 px-14 service-shadow">
 							<h3 className="text-2xl font-bold text-white h3-shadow">
@@ -33,7 +33,7 @@ const Services: FC = () => {
 					</SlideInFromRightWhenVisible>
 				</div>
 
-				<div className="flex items-center">
+				<div className="flex flex-col-reverse items-center md:flex-row">
 					<SlideInFromRightWhenVisible>
 						<img
 							src={sixteen}
@@ -86,7 +86,7 @@ const SlideInFromRightWhenVisible: FC<PropsWithChildren> = ({ children }) => {
 				visible: { x : 0, opacity: 1 },
 				hidden: { x : 100, opacity: 0 },
 			}}
-      className="w-3/6 shrink-0"
+      className="md:w-3/6 shrink-0"
 		>
 			{children}
 		</motion.div>

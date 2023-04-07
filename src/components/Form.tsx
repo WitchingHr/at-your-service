@@ -24,7 +24,7 @@ const Form: FC = () => {
 		phone: "",
 		description: "",
 	});
-	const [submitData, setSubmitData] = useState<boolean>(false);
+	const [submitData, setSubmitData] = useState<boolean>(true);
 	const [isSubmitted, setIsSubmitted] = useState(false);
 	const [alreadySubmitted, setAlreadySubmitted] = useState<boolean>(false);
 
@@ -62,15 +62,15 @@ const Form: FC = () => {
 	return (
 		<section className="form-shadow gradient">
 			<div id="book" className="section-container">
-				<div className="flex items-center justify-between pt-8">
+				<div className="flex items-center justify-between md:pt-8">
 					<h2 className="text-3xl font-medium">
 						{isSubmitted ? "Booked!" : "Book an Estimate"}
 					</h2>
 					{isSubmitted === false && (
-						<div className="text-gray-500">Step {page} of 3</div>
+						<div className="ml-4 text-gray-500 whitespace-nowrap">Step {page} of 3</div>
 					)}
 				</div>
-				<div className="flex justify-between">
+				<div className="flex flex-col md:justify-between md:flex-row">
 					{alreadySubmitted ? (
 						<div className="mt-10 text-gray-500 mb-60">
 							Please wait 15 minutes before requesting another estimate

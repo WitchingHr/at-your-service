@@ -16,13 +16,13 @@ interface FormPageThreeProps {
 const FormPageThree: FC<FormPageThreeProps> = ({ data, handleBack, handleFinalSubmit, isSubmitted, setIsSubmitted, submitData }) => {
   return(
     <>
-      <div className="w-1/3">
+      <div className="md:w-1/3">
         <div className="mt-4 text-2xl font-medium">
           {isSubmitted
             ? "Thank you for your request"
             : "Review and Submit"}
         </div>
-        <div className="pr-12 text-gray-500">
+        <div className="text-gray-500 md:pr-12">
           {isSubmitted ? (
             "We will contact you shortly."
           ) : (
@@ -30,7 +30,7 @@ const FormPageThree: FC<FormPageThreeProps> = ({ data, handleBack, handleFinalSu
           )}
         </div>
       </div>
-      <div className="w-2/3">
+      <div className="mt-5 lg:mt-0 md:w-2/3">
         <>
           {submitData ? (
             <Submitter
@@ -108,16 +108,16 @@ const FormPageThree: FC<FormPageThreeProps> = ({ data, handleBack, handleFinalSu
                   disabled
                 />
               </div>
-              <div className="flex gap-6">
+              <div className="flex justify-around gap-6">
                 <button
                   onClick={handleBack}
-                  className="w-32 px-5 py-2 mt-4 mb-8 ml-auto font-medium text-white bg-indigo-400 rounded-full text-md"
+                  className="w-32 px-5 py-2 mt-1 font-medium text-white bg-indigo-400 rounded-full md:mt-4 md:mb-8 md:ml-auto text-md"
                 >
                   Back
                 </button>
                 <button
                   onClick={handleFinalSubmit}
-                  className="w-32 px-5 py-2 mt-4 mb-8 font-medium text-white bg-indigo-400 rounded-full text-md"
+                  className="w-32 px-5 py-2 mt-1 font-medium text-white bg-indigo-400 rounded-full md:mt-4 md:mb-8 text-md"
                 >
                   Submit
                 </button>
@@ -162,7 +162,7 @@ const Submitter: FC<SubmitterProps> = ({
 
 	if (isSubmitted === false) {
 		return (
-			<div className="flex flex-col items-center justify-center mt-4 mb-60">
+			<div className="flex flex-col items-center justify-center mt-4 sm:mt-0 mb-60">
 				<MagicSpinner color={"#818cf8"} />
 				<div id="submitting" className="text-xl text-indigo-500">
 					Submitting...

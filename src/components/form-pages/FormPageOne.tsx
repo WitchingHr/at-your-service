@@ -12,17 +12,17 @@ interface FormPageOneProps {
 const FormPageOne: FC<FormPageOneProps> = ({ handleData, register, handleSubmit, errors }) => {
   return(
     <>
-      <div className="w-1/3">
+      <div className="md:w-1/3">
         <div className="mt-4 text-2xl font-medium">Your Information</div>
-        <div className="pr-12 text-gray-500">Please enter your contact information</div>
+        <div className="text-gray-500 md:pr-12">Please enter your contact information</div>
       </div>
-      <div className="w-2/3">
+      <div className="mt-5 lg:mt-0 md:w-2/3">
         <form
           onSubmit={handleSubmit((data) => handleData(data))}
           className="flex flex-col gap-4"
         >
           <div className="flex flex-col gap-1">
-            <div className="flex gap-3">
+            <div className="flex flex-col md:gap-3 md:flex-row">
               <label htmlFor="name" className="mt-auto text-gray-500">
                 Name
               </label>
@@ -52,7 +52,7 @@ const FormPageOne: FC<FormPageOneProps> = ({ handleData, register, handleSubmit,
             />
           </div>
           <div className="flex flex-col gap-1">
-            <div className="flex gap-3">
+            <div className="flex flex-col md:gap-3 md:flex-row">
               <label
                 htmlFor="email"
                 className="mt-auto text-gray-500"
@@ -76,7 +76,7 @@ const FormPageOne: FC<FormPageOneProps> = ({ handleData, register, handleSubmit,
             />
           </div>
           <div className="flex flex-col gap-1">
-            <div className="flex gap-3">
+            <div className="flex flex-col md:gap-3 md:flex-row">
               <label
                 htmlFor="phone"
                 className="mt-auto text-gray-500"
@@ -116,7 +116,7 @@ const FormPageOne: FC<FormPageOneProps> = ({ handleData, register, handleSubmit,
           </div>
           <button
             type="submit"
-            className="w-32 px-5 py-2 mt-4 mb-8 ml-auto font-medium text-white bg-indigo-400 rounded-full text-md"
+            className="w-32 px-5 py-2 mt-3 ml-auto mr-4 font-medium text-white bg-indigo-400 rounded-full md:mr-0 md:mt-4 md:mb-8 text-md"
           >
             Continue
           </button>
