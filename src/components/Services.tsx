@@ -6,7 +6,7 @@ import sixteen from "../assets/img_16.jpeg";
 
 const Services: FC = () => {
 	return (
-		<section className="overflow-hidden gradient-2">
+		<section id="services" className="overflow-hidden gradient-2">
 			<div className="flex flex-col justify-center gap-6 !pt-8 !pb-10 md:!py-16 section-container">
 				<h2 className="text-3xl font-medium text-center text-white md:mb-6 sm:text-left sm:text-4xl text-shadow">
 					Our Services

@@ -15,7 +15,7 @@ export const newJob = functions.firestore.document("jobs/{jobId}")
     const data = jobSnap.data() || {};
     const msg = {
       to: "matt1494@gmail.com",
-      from: "matt.thomas.developer@gmail.com",
+      from: "atyourservice603mail@gmail.com",
       templateId: TEMPLATE_ID,
       dynamic_template_data: {
         name: data.name,

@@ -71,8 +71,8 @@ const Form: FC = () => {
 	};
 
 	return (
-		<section className="form-shadow gradient">
-			<div id="book" className="section-container">
+		<section id="book" className="form-shadow gradient">
+			<div className="section-container">
 				<div className="flex items-center justify-between md:pt-8">
 					<h2 className="text-3xl font-medium">
 						{isSubmitted ? "Booked!" : "Book an Estimate"}

@@ -14,9 +14,9 @@ const Footer: FC = () => {
           <div className="flex mt-6 md:gap-20">
             <ul>
               <li><a className="duration-200 hover:text-indigo-400" href="/">Home</a></li>
-              <li><a className="duration-200 hover:text-indigo-400" href="/services">Services</a></li>
-              <li><a className="duration-200 hover:text-indigo-400" href="/about">About</a></li>
-              <li><a className="duration-200 hover:text-indigo-400" href="/book">Book an Estimate</a></li>
+              <li><a className="duration-200 hover:text-indigo-400" href="#services">Services</a></li>
+              <li><a className="duration-200 hover:text-indigo-400" href="#about">About</a></li>
+              <li><a className="duration-200 hover:text-indigo-400" href="#book">Book an Estimate</a></li>
             </ul>
             <ul>
               <li><button className="duration-200 hover:text-indigo-400" onClick={handleContact}>Contact Us</button></li>
