@@ -25,17 +25,6 @@ const analytics = getAnalytics(app);
 const db = getFirestore(app);
 const jobsRef = collection(db, "jobs");
 
-
-// export const addJob = async (data: FormData) => {
-//   const docRef = await addDoc(jobs, {
-//     name: data.name,
-//     email: data.email,
-//     phone: data.phone,
-//     description: data.description,
-//     timestamp: new Date(),
-//   });
-// }
-
 export const addJob = async (data: FormData) => {
   const newJobData = {
     name: data.name,
@@ -48,8 +37,6 @@ export const addJob = async (data: FormData) => {
   // const snapshot = await jobsRef.where(;
   const q = query(collection(db, "jobs"), where('timestamp', '>=', Number(Timestamp.now().toDate()) - 86400000));
   const querySnapshot = await getDocs(q);
-  console.log(querySnapshot)
-
 
   if (querySnapshot.size >= 20) {
     throw new Error, 'Cannot add more than 20 jobs in a 24-hour period';

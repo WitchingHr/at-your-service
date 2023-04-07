@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useEffect, useState, useRef } from "react";
 
 const Header: FC = () => {
 	const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -11,13 +11,15 @@ const Header: FC = () => {
 		? "bg-indigo-400 text-white"
 		: "bg-white text-indigo-400 button-shadow-blue";
 
+	const headerRef = useRef<HTMLDivElement>(null);
+
 	const handleScroll = () => {
 		if (window.scrollY > 0) {
 			setIsScrolled(true);
 		} else {
 			setIsScrolled(false);
 		}
-		if (window.scrollY > 905) {
+		if (window.scrollY > window.innerHeight - headerRef.current!.offsetHeight) {
 			setIsScrolled2(true);
 		} else {
 			setIsScrolled2(false);
@@ -31,6 +33,7 @@ const Header: FC = () => {
 
 	return (
 		<header
+			ref={headerRef}
 			className={
 				`z-50 fixed top-0 w-full duration-300 ` + wrapStyle + solidWhite
 			}

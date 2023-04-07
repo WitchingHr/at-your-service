@@ -1,8 +1,4 @@
-import React, {
-	FC,
-	useEffect,
-	useState,
-} from "react";
+import React, { FC, useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { checkCooldown } from "../utils";
 import FormPageOne from "./form-pages/FormPageOne";
@@ -24,15 +20,30 @@ const Form: FC = () => {
 		phone: "",
 		description: "",
 	});
-	const [submitData, setSubmitData] = useState<boolean>(true);
+	const [submitData, setSubmitData] = useState<boolean>(false);
 	const [isSubmitted, setIsSubmitted] = useState(false);
-	const [alreadySubmitted, setAlreadySubmitted] = useState<boolean>(false);
+	const [alreadySubmitted, setAlreadySubmitted] = useState<number | null>(null);
+
+	const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
 	useEffect(() => {
 		const cooldown = checkCooldown();
 		if (cooldown) {
-			setAlreadySubmitted(true);
+			setAlreadySubmitted(15 - cooldown);
 		}
+		timerRef.current = setInterval(() => {
+			const cooldown = checkCooldown();
+			if (cooldown) {
+				setAlreadySubmitted(15 - cooldown);
+			} else {
+				setAlreadySubmitted(null);
+			}
+		}, 60000);
+		return () => {
+			if (timerRef.current) {
+				clearInterval(timerRef.current);
+			}
+		};
 	}, []);
 
 	const handleBack = () => {
@@ -67,13 +78,34 @@ const Form: FC = () => {
 						{isSubmitted ? "Booked!" : "Book an Estimate"}
 					</h2>
 					{isSubmitted === false && (
-						<div className="ml-4 text-gray-500 whitespace-nowrap">Step {page} of 3</div>
+						alreadySubmitted ? (
+							<div className="ml-4 text-3xl text-gray-500 whitespace-nowrap">
+								◴
+							</div>
+					) : (
+						<div className="ml-4 text-gray-500 whitespace-nowrap">
+							Step {page} of 3
+						</div>
+					)
 					)}
 				</div>
 				<div className="flex flex-col md:justify-between md:flex-row">
 					{alreadySubmitted ? (
 						<div className="mt-10 text-gray-500 mb-60">
-							Please wait 15 minutes before requesting another estimate
+							<p>
+								Please wait {alreadySubmitted} minute
+								{alreadySubmitted === 1 ? "" : "s"} before requesting another
+								estimate.
+							</p>
+							<p className="my-2">
+								If you are seeing this and you haven&apos;t booked an estimate yet,
+								please email us at:{" "}
+							</p>
+							<a className="text-indigo-500" href="mailto:atyourservice603@gmail.com">
+								atyourservice603@gmail.com
+							</a>
+							<p className="my-2">or call:</p>
+							<a className="text-indigo-500" href="tel:6036202005">(603)&nbsp;620-2005</a>
 						</div>
 					) : (
 						<>
