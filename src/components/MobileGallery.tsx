@@ -76,7 +76,6 @@ const MobileGallery: FC = () => {
 				<div className="flex pt-8 duration-500 flex-nowrap" ref={gridRef}>
 					<div id="page-1" className="min-w-full">
 						<div
-							data-testId="gallery"
 							className="grid grid-cols-2 grid-rows-2 gap-7 px-7"
 						>
 							{images1.map((image, index) => (
@@ -173,7 +172,6 @@ const Modal: FC<ModalProps> = ({ selected, setSelected }) => {
 	return (
 		<div
 			className={`fixed top-0 left-0 z-50 flex items-center justify-center w-screen h-screen bg-black/90 `}
-			data-testId="modal"
 		>
 			{selected !== null && (
 				<div className="relative">
