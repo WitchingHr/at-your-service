@@ -16,7 +16,7 @@ const About: FC = () => {
 		>
 			<FadeInWhenVisible>
 				<div
-					className={`flex flex-col md:flex-row items-center md:justify-between min-h-screen section-container duration-700`}
+					className={`flex flex-col md:flex-row items-center md:justify-between md:min-h-screen section-container duration-700`}
 				>
 					<h1 className="text-3xl font-medium text-white mb-7 md:font-bold md:text-6xl md:ml-12 md:mr-5 md:mb-96 lg:ml-40 lg:mb-96 text-shadow">
 						About Us

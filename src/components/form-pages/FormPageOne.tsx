@@ -35,11 +35,6 @@ const FormPageOne: FC<FormPageOneProps> = ({ handleData, register, handleSubmit,
             <input
               {...register("name", {
                 required: "Please enter a name",
-                maxLength: {
-                  value: 50,
-                  message:
-                    "Please enter a name with 50 characters or less",
-                },
                 pattern: {
                   value: /^[A-Za-z]+( [A-Za-z]+)?$/i,
                   message:
@@ -49,6 +44,7 @@ const FormPageOne: FC<FormPageOneProps> = ({ handleData, register, handleSubmit,
               type="text"
               id="name"
               className="px-3 py-2 border-2 border-gray-300 rounded-md"
+              maxLength={50}
             />
           </div>
           <div className="flex flex-col gap-1">

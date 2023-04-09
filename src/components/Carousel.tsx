@@ -72,7 +72,7 @@ const Carousel: FC = () => {
 	return (
 		<section className="gradient-2">
 			<div className="flex flex-col justify-center section-container">
-				<div id="carousel" className="flex px-4 py-20 overflow-x-scroll">
+				<div data-testid="carousel" id="carousel" className="flex px-4 py-20 overflow-x-scroll">
 					{images.map((image, index) => (
 						<ImageViewer
 							key={index}
@@ -197,10 +197,11 @@ const Modal: FC<ModalProps> = ({ handleModal, handleEscape, id }) => {
 
 	return (
 		<div
+			data-testId="modal"
 			className={`fixed top-0 left-0 z-50 flex items-center justify-center w-screen h-screen bg-black/90 `}
 			onClick={handleModal}
 		>
-			<img src={images[source]} alt="" className="h-[75vh] w-auto" />
+			<img src={images[source]} alt="" data-testId={images[source]} className="h-[75vh] w-auto" />
 		</div>
 	);
 };
