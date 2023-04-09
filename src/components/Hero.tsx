@@ -19,8 +19,8 @@ const Hero: FC = () => {
 			className="hero"
 			style={{
 				backgroundImage: `url(${heroImage})`,
-				backgroundSize: "cover",
-				backgroundPosition: "center",
+				// backgroundSize: "cover",
+				// backgroundPosition: "center",
 			}}
 		>
 			<div className="flex flex-col justify-center min-h-screen gap-3 section-container">

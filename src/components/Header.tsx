@@ -19,7 +19,8 @@ const Header: FC = () => {
 		} else {
 			setIsScrolled(false);
 		}
-		if (window.scrollY > window.innerHeight - headerRef.current!.offsetHeight) {
+		if (!headerRef.current) return;
+		if (window.scrollY > window.innerHeight - headerRef.current.offsetHeight) {
 			setIsScrolled2(true);
 		} else {
 			setIsScrolled2(false);
