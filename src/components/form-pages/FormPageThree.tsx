@@ -22,9 +22,13 @@ const FormPageThree: FC<FormPageThreeProps> = ({ data, handleBack, handleFinalSu
             ? "Thank you for your request"
             : "Review and Submit"}
         </div>
-        <div className="text-gray-500 md:pr-12">
+        <div className="mt-2 text-gray-500 md:pr-12">
           {isSubmitted ? (
-            "We will contact you shortly."
+            <>
+              <p>We will contact you shortly.</p>
+              <br />
+              <p>If you haven&apos;t heard from us in 24 hours, please call us at: <br /> <a href="tel:6036202005" className="font-medium">(603)&nbsp;620-2005</a></p>
+            </>
           ) : (
             "Please review your information and submit your request"
           )}

@@ -74,7 +74,7 @@ const Form: FC = () => {
 		<section id="book" className="form-shadow gradient">
 			<div className="section-container">
 				<div className="flex items-center justify-between md:pt-8">
-					<h2 className="text-3xl font-medium">
+					<h2 className="text-3xl font-medium poppins">
 						{isSubmitted ? "Booked!" : "Book an Estimate"}
 					</h2>
 					{isSubmitted === false && (
@@ -83,7 +83,7 @@ const Form: FC = () => {
 								◴
 							</div>
 					) : (
-						<div className="ml-4 text-gray-500 whitespace-nowrap">
+						<div className="ml-4 text-gray-500 whitespace-nowrap poppins">
 							Step {page} of 3
 						</div>
 					)
@@ -91,7 +91,7 @@ const Form: FC = () => {
 				</div>
 				<div className="flex flex-col md:justify-between md:flex-row">
 					{alreadySubmitted ? (
-						<div className="mt-10 text-gray-500 mb-60">
+						<div className="mt-10 text-gray-500 mb-60 poppins">
 							<p>
 								Please wait {alreadySubmitted} minute
 								{alreadySubmitted === 1 ? "" : "s"} before requesting another
@@ -108,7 +108,7 @@ const Form: FC = () => {
 							<a className="text-indigo-500" href="tel:6036202005">(603)&nbsp;620-2005</a>
 						</div>
 					) : (
-						<>
+						<div className="poppins">
 							{page === 1 ? (
 								<FormPageOne
 									handleData={handleData}
@@ -134,7 +134,7 @@ const Form: FC = () => {
 									setIsSubmitted={setIsSubmitted}
 								/>
 							)}
-						</>
+						</div>
 					)}
 				</div>
 			</div>

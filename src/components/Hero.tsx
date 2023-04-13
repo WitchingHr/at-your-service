@@ -1,17 +1,9 @@
 import React, { FC, useRef } from "react";
-import { useInView } from "framer-motion";
 
 import heroImage from "../assets/hero-rev.jpg";
 
 const Hero: FC = () => {
 	const ref = useRef<HTMLDivElement>(null);
-
-	const myRef = useRef<HTMLDivElement>(null);
-	const isInView = useInView(myRef, { margin: "-15%" });
-	const isInView2 = useInView(myRef, { margin: "-25%" });
-	const headingStyle = isInView ? "text-transparent" : "text-white";
-	const ampStyle = isInView ? "text-transparent" : "text-indigo-500";
-	const pStyle = isInView2 ? "text-transparent" : "text-white";
 
 	return (
 		<section
@@ -19,25 +11,27 @@ const Hero: FC = () => {
 			className="hero"
 			style={{
 				backgroundImage: `url(${heroImage})`,
-				// backgroundSize: "cover",
-				// backgroundPosition: "center",
 			}}
 		>
 			<div className="flex flex-col justify-center min-h-screen gap-3 section-container">
-				<h1
-					className={
-						`text-4xl sm:text-6xl font-bold duration-500 mt-auto ` +
-						headingStyle
-					}
-				>
+				<h1 className="mt-auto text-4xl font-medium text-white sm:text-6xl poppins">
 					Painting<br></br>
-					<span className={`duration-500 ` + ampStyle}>&</span> Organizing
+					<span className="text-indigo-500">&</span> Organizing
 				</h1>
-				<p className={`text-lg mr-4 sm:mr-0 sm:text-xl italic mb-28 duration-500 ` + pStyle}>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.<br></br>Rem
-					facere ducimus officia ab? Inventore, perspiciatis modi.
+				<p className="mr-4 text-lg font-light text-white md:font-extralight sm:mr-0 sm:text-xl mb-28 poppins">
+					Highly rated female owned painting company serving<br></br>Southern
+					New Hampshire and Northern Massachusetts.<br></br>Known for our
+					quality work and competitive pricing.
 				</p>
-				<div className="mt-auto" ref={myRef}></div>
+				<div className="mt-auto"></div>
+				{/* <div className="text-xl font-light text-white poppins">
+					<span className="text-2xl font-medium">Work</span>{" "}
+					[wurk] -{" "}
+					<span className="font-normal">verb</span>
+					; an expression of{" "}
+					<span className="font-medium text-indigo-500">love</span>{" "}
+					in service to mankind
+				</div> */}
 			</div>
 		</section>
 	);

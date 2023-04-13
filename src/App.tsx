@@ -9,6 +9,7 @@ import Carousel from './components/Carousel';
 import MobileGallery from './components/MobileGallery';
 import Services from './components/Services';
 import About from './components/About';
+import FAQ from './components/FAQ';
 
 const App: FC = () => {
   const width = useWindowDimensions();
@@ -17,6 +18,7 @@ const App: FC = () => {
       <Header />
       <Hero />
       <Services />
+      <FAQ />
       <About />
       {width > 768 ? <Carousel /> : <MobileGallery />}
       <Form />

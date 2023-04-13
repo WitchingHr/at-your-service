@@ -9,6 +9,19 @@
   padding: 30px 8%;
 }
 
+.headerFont {
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Parisienne', cursive;
+}
+
+.poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.services-text {
+  color: #29353a
+}
+
 .text-shadow {
   text-shadow: 1px 1px 2px #4f569e;
 }

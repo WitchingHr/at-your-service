@@ -10,8 +10,8 @@ const Footer: FC = () => {
     <footer className="text-white bg-gray-900">
       <div className="py-8 px-[8%] max-w-[1440px] mx-auto">
         <div className="flex flex-col justify-between">
-          <div className="text-xl font-bold md:text-3xl">AT Your Service</div>
-          <div className="flex mt-6 md:gap-20">
+          <div className="text-xl font-bold md:text-3xl headerFont">AT Your Service...</div>
+          <div className="flex mt-6 md:gap-20 poppins">
             <ul>
               <li><a className="duration-200 hover:text-indigo-400" href="/">Home</a></li>
               <li><a className="duration-200 hover:text-indigo-400" href="#services">Services</a></li>
@@ -22,8 +22,8 @@ const Footer: FC = () => {
               <li><button className="duration-200 hover:text-indigo-400" onClick={handleContact}>Contact Us</button></li>
               {contact && (
                 <>
-                  <li><a href="tel:6036202005">(603)&nbsp;620-2005</a></li>
-                  <li><a href="mailto:atyourservice603@gmail.com">atyourservice603@gmail.com</a></li>
+                  <li className="duration-200 hover:text-indigo-400"><a href="tel:6036202005">(603)&nbsp;620-2005</a></li>
+                  <li className="duration-200 hover:text-indigo-400"><a href="mailto:atyourservice603@gmail.com">atyourservice603@gmail.com</a></li>
                 </>
               )}
             </ul>
@@ -42,7 +42,7 @@ const Footer: FC = () => {
               </svg>
             </a>
           </div>
-          <div className="mt-6 ml-auto text-gray-400">© 2023 AT Your Service</div>
+          <div className="mt-6 ml-auto text-gray-400 poppins">© 2023 AT Your Service...</div>
         </div>
       </div>
     </footer>

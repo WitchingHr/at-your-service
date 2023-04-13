@@ -197,11 +197,11 @@ const Modal: FC<ModalProps> = ({ handleModal, handleEscape, id }) => {
 
 	return (
 		<div
-			data-testId="modal"
+			data-testid="modal"
 			className={`fixed top-0 left-0 z-50 flex items-center justify-center w-screen h-screen bg-black/90 `}
 			onClick={handleModal}
 		>
-			<img src={images[source]} alt="" data-testId={images[source]} className="h-[75vh] w-auto" />
+			<img src={images[source]} alt=""  className="h-[75vh] w-auto" />
 		</div>
 	);
 };

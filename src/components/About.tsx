@@ -18,27 +18,35 @@ const About: FC = () => {
 				<div
 					className={`flex flex-col md:flex-row items-center md:justify-between md:min-h-screen section-container duration-700`}
 				>
-					<h1 className="text-3xl font-medium text-white mb-7 md:font-bold md:text-6xl md:ml-12 md:mr-5 md:mb-96 lg:ml-40 lg:mb-96 text-shadow">
+					<h1 className="text-3xl font-medium text-white poppins mb-7 md:font-medium md:text-6xl md:mr-5 md:mb-96 lg:mb-[32rem] text-shadow">
 						About Us
 					</h1>
-					<div className="flex flex-col md:w-[60%] lg:w-[45%] gap-2 md:gap-4 lg:gap-10 px-9 py-10 xl:py-16 xl:px-10 text-indigo-700 font-medium border border-white rounded-md drop-shadow-lg bg-white/90">
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+					<div className="poppins text-lg md:text-base flex flex-col md:w-[60%] lg:w-[50%] gap-2 md:gap-4 lg:gap-6 px-9 py-10 xl:py-16 xl:px-10 text-indigo-700 font-extralight border border-white rounded-md drop-shadow-lg bg-white/90">
 						<p>
-							Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-							Consectetur aut reprehenderit maiores, neque facere quas dolorem?
-							Vero, rerum nihil sed labore quidem sint autem nisi ipsa commodi?
-							Quibusdam, similique reprehenderit.
+							As a seasoned professional with over a decade of experience in the
+							painting and organizational industry, I have had the pleasure of
+							earning the trust and loyalty of a long list of clients who rely
+							on my expertise time and time again. My company name reflects my
+							commitment to serving you and your family with top-notch service.
 						</p>
 						<p>
-							Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-							Consectetur aut reprehenderit maiores, neque facere quas dolorem?
-							Vero, rerum nihil sed labore quidem sint autem nisi ipsa commodi?
-							Quibusdam, similique reprehenderit.
+							As a small business owner, I specialize in managing smaller jobs
+							with the utmost care and precision. My primary focus is ensuring
+							that every job is completed to your complete satisfaction. I take
+							great pride in making the process seamless and easy, and I am
+							dedicated to providing exceptional service that goes beyond your
+							expectations.
+						</p>
+						<p>
+							Rest assured, when you choose AT Your Service, you can expect
+							reliable and efficient service that prioritizes your needs. Thank
+							you for considering my services, and I look forward to the
+							opportunity to work with you.
 						</p>
 						<div>
-							<p className="text-lg text-right">- Allison Thomas</p>
+							<p className="text-lg font-light text-right">- Allison Thomas</p>
 							<p className="italic text-right text-md">
-								Founder, AT Your Service
+								Owner, AT Your Service
 							</p>
 						</div>
 						<div className="flex h-10 gap-4">
@@ -85,6 +93,15 @@ const About: FC = () => {
 					</div>
 				</div>
 			</FadeInWhenVisible>
+			<div className="text-xl font-light text-white section-container poppins">
+				<div className="text-2xl font-medium">Work</div>{" "}
+				<div>
+					[wurk] - <span className="font-normal">verb;</span>
+				</div>
+				an expression of{" "}
+				<span className="font-medium text-indigo-500">love</span> in service to
+				mankind
+			</div>
 		</section>
 	);
 };
