@@ -108,7 +108,7 @@ const Form: FC = () => {
 							<a className="text-indigo-500" href="tel:6036202005">(603)&nbsp;620-2005</a>
 						</div>
 					) : (
-						<div className="poppins">
+						<>
 							{page === 1 ? (
 								<FormPageOne
 									handleData={handleData}
@@ -134,7 +134,7 @@ const Form: FC = () => {
 									setIsSubmitted={setIsSubmitted}
 								/>
 							)}
-						</div>
+						</>
 					)}
 				</div>
 			</div>
