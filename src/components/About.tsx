@@ -18,10 +18,10 @@ const About: FC = () => {
 				<div
 					className={`flex flex-col md:flex-row items-center md:justify-between md:min-h-screen section-container duration-700`}
 				>
-					<h1 className="text-3xl font-medium text-white poppins mb-7 md:font-medium md:text-6xl md:mr-5 md:mb-96 lg:mb-[32rem] text-shadow">
+					<h1 className="text-3xl font-medium text-white poppins mb-7 md:font-medium md:text-5xl md:mr-5 md:mb-96 lg:mb-[32rem] text-shadow">
 						About Us
 					</h1>
-					<div className="poppins text-lg md:text-base flex flex-col md:w-[60%] lg:w-[50%] gap-2 md:gap-4 lg:gap-6 px-9 py-10 xl:py-16 xl:px-10 text-indigo-700 font-extralight border border-white rounded-md drop-shadow-lg bg-white/90">
+					<div className="poppins text-lg md:text-base flex flex-col md:w-[60%] lg:w-[50%] gap-2 md:gap-4 lg:gap-6 px-9 py-10 xl:py-16 xl:px-10 text-indigo-700 font-light border border-white rounded-md drop-shadow-lg bg-white/90">
 						<p>
 							As a seasoned professional with over a decade of experience in the
 							painting and organizational industry, I have had the pleasure of
@@ -93,14 +93,16 @@ const About: FC = () => {
 					</div>
 				</div>
 			</FadeInWhenVisible>
-			<div className="text-xl font-light text-white section-container poppins">
+			<div className="flex flex-col text-xl font-light text-white md:justify-center md:items-center md:flex-row md:gap-2 section-container poppins work-gradient">
 				<div className="text-2xl font-medium">Work</div>{" "}
 				<div>
 					[wurk] - <span className="font-normal">verb;</span>
 				</div>
-				an expression of{" "}
-				<span className="font-medium text-indigo-500">love</span> in service to
-				mankind
+				<div>
+					an expression of{" "}
+					<span className="font-medium text-indigo-600">love</span> in service to
+					mankind
+				</div>
 			</div>
 		</section>
 	);

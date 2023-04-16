@@ -18,7 +18,7 @@ const Services: FC = () => {
 							<h3 className="text-2xl font-bold text-white h3-shadow poppins">
 								Interior Painting
 							</h3>
-							<div className="text-lg md:text-base services-text font-extralight poppins">
+							<div className="text-lg font-light md:text-base services-text poppins">
 								<p>
 									Transform your living spaces with our expert painting
 									services. We provide comprehensive color consultations to help
@@ -53,7 +53,7 @@ const Services: FC = () => {
 							<h3 className="text-2xl font-bold text-white h3-shadow poppins">
 								Organizing
 							</h3>
-							<div className="text-lg md:text-base poppins font-extralight services-text">
+							<div className="text-lg font-light md:text-base poppins services-text">
 								<p>
 									We understand the importance of keeping your home tidy and
 									organized. If you are feeling overwhelmed by excess clutter in

@@ -1,24 +1,26 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import Collapsable from "./Collapsable";
 
-const FAQ: FC = () => {
+const Commitment: FC = () => {
+  const [active, setActive] = useState<string | null>(null);
 	return (
 		<section id="faq" className="overflow-hidden gradient form-shadow">
-			<div className="poppins font-extralight flex flex-col justify-center text-indigo-600 !pt-8 !pb-10 md:!py-16 section-container">
-        <Collapsable title="Fully Insured">
-					<p>At AT Your Service, we are committed to providing our
+			<div className="poppins text-center sm:text-start font-light flex flex-col justify-center text-indigo-600 !pt-8 !pb-10 md:!py-16 section-container">
+        <h2 className="text-3xl font-medium commitment-shadow">Our Commitment</h2>
+        <Collapsable title="Fully Insured" active={active} setActive={setActive}>
+					<p>We are committed to providing our
 					clients with exceptional service that is rooted in trust and quality
 					workmanship. As a <b>fully insured</b> company, you can rest assured that
 					your property is in safe hands when you choose us.</p>
         </Collapsable>
-        <Collapsable title="Meticulous Attention to Detail">
+        <Collapsable title="Meticulous Attention to Detail" active={active} setActive={setActive}>
 					<p>We take pride in the <b>meticulous attention to detail</b> that we
 					bring to every project. We understand that the smallest details can
 					make a significant difference in the overall result of a project and
 					will work tirelessly to ensure that every project meets our high
 					standards.</p>
         </Collapsable>
-        <Collapsable title="Free Written Estimates">
+        <Collapsable title="Free Written Estimates" active={active} setActive={setActive}>
           <p>
             We aim to provide transparency and instill confidence in our services
             by offering <b>free written estimates</b>. This service allows you to
@@ -26,7 +28,7 @@ const FAQ: FC = () => {
             before we begin work.
           </p>
         </Collapsable>
-        <Collapsable title="Clean and Tidy Work Environment">
+        <Collapsable title="Clean and Tidy Work Environment" active={active} setActive={setActive}>
           <p>
             We are dedicated to ensuring that your home remains clean and
             tidy throughout the project. We take great care to{" "}
@@ -34,9 +36,9 @@ const FAQ: FC = () => {
             home as we found it.
           </p>
         </Collapsable>
-        <Collapsable title="Timely Completion">
+        <Collapsable title="Timely Completion" active={active} setActive={setActive}>
           <p>
-            Lastly, we understand the importance of keeping our time
+            We understand the importance of keeping our time
             commitment. We value your time and strive to <b>complete every project
             within the agreed-upon timeframe</b>. If there are any changes or delays,
             we communicate with you promptly to keep you informed.
@@ -47,4 +49,4 @@ const FAQ: FC = () => {
 	);
 };
 
-export default FAQ;
+export default Commitment;

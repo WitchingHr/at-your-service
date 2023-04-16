@@ -19,11 +19,15 @@
 }
 
 .services-text {
-  color: #29353a
+  color: #0a0d0f
 }
 
 .text-shadow {
   text-shadow: 1px 1px 2px #4f569e;
+}
+
+.commitment-shadow {
+  text-shadow: 1px 1px 2px #bbbbbb;
 }
 
 .button-shadow-blue {
@@ -110,6 +114,10 @@
 
 .faq-shadow {
   box-shadow: inset 0px 0px 3px 1px #a2a0a0;
+}
+
+.work-gradient {
+  background: linear-gradient(90deg, transparent, #c9b895cc, transparent);
 }
 
 @media only screen and (max-width: 768px) {

@@ -14,24 +14,16 @@ const Hero: FC = () => {
 			}}
 		>
 			<div className="flex flex-col justify-center min-h-screen gap-3 section-container">
-				<h1 className="mt-auto text-4xl font-medium text-white sm:text-6xl poppins">
+				<h1 className="mt-auto text-4xl font-medium text-white sm:text-6xl poppins text-shadow">
 					Painting<br></br>
 					<span className="text-indigo-500">&</span> Organizing
 				</h1>
-				<p className="mr-4 text-lg font-light text-white md:font-extralight sm:mr-0 sm:text-xl mb-28 poppins">
+				<p className="mr-4 text-lg font-light text-white sm:mr-0 sm:text-xl mb-28 poppins text-shadow">
 					Highly rated female owned painting company serving<br></br>Southern
 					New Hampshire and Northern Massachusetts.<br></br>Known for our
 					quality work and competitive pricing.
 				</p>
 				<div className="mt-auto"></div>
-				{/* <div className="text-xl font-light text-white poppins">
-					<span className="text-2xl font-medium">Work</span>{" "}
-					[wurk] -{" "}
-					<span className="font-normal">verb</span>
-					; an expression of{" "}
-					<span className="font-medium text-indigo-500">love</span>{" "}
-					in service to mankind
-				</div> */}
 			</div>
 		</section>
 	);

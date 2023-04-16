@@ -61,11 +61,11 @@ const FormPageTwo: FC<FormPageTwoProps> = ({ handleData, register, handleSubmit,
           <div className="flex justify-around gap-6">
             <button
               onClick={handleBack}
-              className="w-32 px-5 py-2 mt-2 font-medium text-white bg-indigo-400 rounded-full md:ml-auto md:mt-4 md:mb-8 text-md"
+              className="w-32 px-5 py-2 mt-2 font-medium text-white bg-indigo-500 rounded-full md:ml-auto md:mt-4 md:mb-8 text-md"
             >
               Back
             </button>
-            <button className="w-32 px-5 py-2 mt-2 font-medium text-white bg-indigo-400 rounded-full md:mt-4 md:mb-8 text-md">
+            <button className="w-32 px-5 py-2 mt-2 font-medium text-white bg-indigo-500 rounded-full md:mt-4 md:mb-8 text-md">
               Continue
             </button>
           </div>
