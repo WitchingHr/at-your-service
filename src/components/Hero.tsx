@@ -16,7 +16,7 @@ const Hero: FC = () => {
 			<div className="flex flex-col justify-center min-h-screen gap-3 section-container">
 				<h1 className="mt-auto text-4xl font-medium text-white sm:text-6xl poppins text-shadow">
 					Painting<br></br>
-					<span className="text-indigo-500">&</span> Organizing
+					<span className="text-indigo-600 amp-shadow">&</span> Organizing
 				</h1>
 				<p className="mr-4 text-lg font-light text-white sm:mr-0 sm:text-xl mb-28 poppins text-shadow">
 					Highly rated female owned painting company serving<br></br>Southern

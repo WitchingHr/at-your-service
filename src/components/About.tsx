@@ -16,12 +16,12 @@ const About: FC = () => {
 		>
 			<FadeInWhenVisible>
 				<div
-					className={`flex flex-col md:flex-row items-center md:justify-between md:min-h-screen section-container duration-700`}
+					className={`flex flex-col lg:flex-row items-center lg:justify-between md:min-h-screen section-container duration-700`}
 				>
-					<h1 className="text-3xl font-medium text-white poppins mb-7 md:font-medium md:text-5xl md:mr-5 md:mb-96 lg:mb-[32rem] text-shadow">
+					<h1 className="text-3xl font-medium text-white poppins mb-[30px] md:mt-[15px] lg:ml-[15%] lg:mb-auto lg:mt-[11%] lg:text-4xl md:font-medium text-shadow">
 						About Us
 					</h1>
-					<div className="poppins text-lg md:text-base flex flex-col md:w-[60%] lg:w-[50%] gap-2 md:gap-4 lg:gap-6 px-9 py-10 xl:py-16 xl:px-10 text-indigo-700 font-light border border-white rounded-md drop-shadow-lg bg-white/90">
+					<div className="poppins text-lg md:text-base flex flex-col md:w-[80%] lg:w-[50%] gap-2 md:gap-4 lg:gap-6 px-9 py-10 xl:py-16 xl:px-10 text-indigo-700 font-light border border-white rounded-md drop-shadow-lg bg-white/90">
 						<p>
 							As a seasoned professional with over a decade of experience in the
 							painting and organizational industry, I have had the pleasure of

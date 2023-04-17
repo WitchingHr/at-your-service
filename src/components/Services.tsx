@@ -12,10 +12,10 @@ const Services: FC = () => {
 					Our Services Include
 				</h2>
 
-				<div className="flex flex-col items-center md:flex-row">
+				<div className="flex flex-col items-center lg:flex-row">
 					<SlideInFromLeftWhenVisible>
 						<div className="flex flex-col gap-3 px-10 py-8 bg-indigo-300 md:py-10 md:px-14 service-shadow">
-							<h3 className="text-2xl font-bold text-white h3-shadow poppins">
+							<h3 className="text-2xl font-medium text-white h3-shadow poppins">
 								Interior Painting
 							</h3>
 							<div className="text-lg font-light md:text-base services-text poppins">
@@ -44,13 +44,13 @@ const Services: FC = () => {
 					</SlideInFromRightWhenVisible>
 				</div>
 
-				<div className="flex flex-col-reverse items-center md:flex-row">
+				<div className="flex flex-col-reverse items-center lg:flex-row">
 					<SlideInFromRightWhenVisible>
 						<img src={sixteen} alt="" className="w-full service-shadow" />
 					</SlideInFromRightWhenVisible>
 					<SlideInFromLeftWhenVisible>
 						<div className="flex flex-col gap-3 px-10 py-8 bg-indigo-300 md:py-10 md:px-14 service-shadow">
-							<h3 className="text-2xl font-bold text-white h3-shadow poppins">
+							<h3 className="text-2xl font-medium text-white h3-shadow poppins">
 								Organizing
 							</h3>
 							<div className="text-lg font-light md:text-base poppins services-text">
@@ -110,7 +110,7 @@ const SlideInFromRightWhenVisible: FC<PropsWithChildren> = ({ children }) => {
 				visible: { x: 0, opacity: 1 },
 				hidden: { x: 100, opacity: 0 },
 			}}
-			className="md:w-3/6 shrink-0"
+			className="lg:w-3/6 shrink-0"
 		>
 			{children}
 		</motion.div>

@@ -6,10 +6,10 @@ const Header: FC = () => {
 	const wrapStyle = isScrolled ? "wrap-gradient" : "bg-transparent";
 	const solidWhite = isScrolled2 ? " solid-white" : "";
 	const bgStyle = isScrolled ? "bg-white shadow-md gradient" : "bg-transparent";
-	const textStyle = isScrolled ? "text-indigo-500" : "text-white text-shadow";
+	const textStyle = isScrolled ? "text-indigo-600" : "text-white text-shadow";
 	const buttonStyle = isScrolled
-		? "bg-indigo-500 text-white"
-		: "bg-white text-indigo-500 button-shadow-blue";
+		? "bg-indigo-600 text-white"
+		: "bg-white text-indigo-600 button-shadow-blue";
 
 	const headerRef = useRef<HTMLDivElement>(null);
 

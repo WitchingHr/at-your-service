@@ -15,6 +15,7 @@ const Footer: FC = () => {
             <ul>
               <li><a className="duration-200 hover:text-indigo-400" href="/">Home</a></li>
               <li><a className="duration-200 hover:text-indigo-400" href="#services">Services</a></li>
+              <li><a className="duration-200 hover:text-indigo-400" href="#commitment">Commitment</a></li>
               <li><a className="duration-200 hover:text-indigo-400" href="#about">About</a></li>
               <li><a className="duration-200 hover:text-indigo-400" href="#book">Book an Estimate</a></li>
             </ul>

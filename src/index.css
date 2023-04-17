@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-padding-top: 104px;
+}
+
 .section-container {
   max-width: 1440px;
   margin-left: auto;
@@ -19,11 +23,17 @@
 }
 
 .services-text {
-  color: #0a0d0f
+  color: #0a0d0f;
+  /* color: white;
+  text-shadow: 1px 1px 2px #585858; */
 }
 
 .text-shadow {
   text-shadow: 1px 1px 2px #4f569e;
+}
+
+.amp-shadow {
+  text-shadow: none;
 }
 
 .commitment-shadow {
@@ -113,7 +123,7 @@
 }
 
 .faq-shadow {
-  box-shadow: inset 0px 0px 3px 1px #a2a0a0;
+  box-shadow: 1px 1px 4px 0px #7b7b7b;
 }
 
 .work-gradient {

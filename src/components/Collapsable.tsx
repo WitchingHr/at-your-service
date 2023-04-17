@@ -42,7 +42,7 @@ const Collapsable: FC<PropsWithChildren<CollapsableProps>> = ({
         role="button"
 				onClick={handleCollapse}
         onKeyDown={(e) => handleKeyDown(e)}
-				className="flex flex-row items-center justify-between pt-8 duration-700 border-b-2 cursor-pointer hover:px-5"
+				className="flex flex-row items-center justify-between pt-8 duration-700 border-b-2 border-indigo-200 cursor-pointer hover:px-5"
 			>
 				<div className="flex flex-row items-center gap-3">
           <div className={`duration-300 text-sm ` + triangleStyle}>▲</div>
@@ -50,7 +50,7 @@ const Collapsable: FC<PropsWithChildren<CollapsableProps>> = ({
         </div>
 				<div className="text-xl">{collapsed ? "+" : "-"}</div>
 			</div>
-			<div className={`px-7 text-lg rounded-md faq-shadow bg-white overflow-hidden duration-500 ` + style }>{children}</div>
+			<div className={`px-7 text-lg font-light faq-shadow text-black bg-indigo-300 overflow-hidden duration-500 ` + style }>{children}</div>
 		</div>
 	);
 };

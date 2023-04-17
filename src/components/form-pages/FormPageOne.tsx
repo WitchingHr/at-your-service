@@ -112,7 +112,7 @@ const FormPageOne: FC<FormPageOneProps> = ({ handleData, register, handleSubmit,
           </div>
           <button
             type="submit"
-            className="w-32 px-5 py-2 mt-3 ml-auto mr-4 font-medium text-white bg-indigo-500 rounded-full md:mr-0 md:mt-4 md:mb-8 text-md"
+            className="w-32 px-5 py-2 mt-3 ml-auto mr-4 font-medium text-white bg-indigo-600 rounded-full md:mr-0 md:mt-4 md:mb-8 text-md"
           >
             Continue
           </button>

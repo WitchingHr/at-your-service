@@ -115,13 +115,13 @@ const FormPageThree: FC<FormPageThreeProps> = ({ data, handleBack, handleFinalSu
               <div className="flex justify-around gap-6">
                 <button
                   onClick={handleBack}
-                  className="w-32 px-5 py-2 mt-1 font-medium text-white bg-indigo-500 rounded-full md:mt-4 md:mb-8 md:ml-auto text-md"
+                  className="w-32 px-5 py-2 mt-1 font-medium text-white bg-indigo-600 rounded-full md:mt-4 md:mb-8 md:ml-auto text-md"
                 >
                   Back
                 </button>
                 <button
                   onClick={handleFinalSubmit}
-                  className="w-32 px-5 py-2 mt-1 font-medium text-white bg-indigo-500 rounded-full md:mt-4 md:mb-8 text-md"
+                  className="w-32 px-5 py-2 mt-1 font-medium text-white bg-indigo-600 rounded-full md:mt-4 md:mb-8 text-md"
                 >
                   Submit
                 </button>
