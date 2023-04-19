@@ -10,7 +10,7 @@ const Footer: FC = () => {
     <footer className="text-white bg-gray-900">
       <div className="py-8 px-[8%] max-w-[1440px] mx-auto">
         <div className="flex flex-col justify-between">
-          <div className="text-xl font-bold md:text-3xl headerFont">AT Your Service...</div>
+          <div className="text-xl md:text-3xl headerFont">AT Your Service...</div>
           <div className="flex mt-6 md:gap-20 poppins">
             <ul>
               <li><a className="duration-200 hover:text-indigo-400" href="/">Home</a></li>
