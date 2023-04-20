@@ -46,7 +46,7 @@ const About: FC = () => {
 						<div>
 							<p className="text-lg font-light text-right">- Allison Thomas</p>
 							<p className="italic text-right text-md">
-								Owner, AT Your Service
+								Owner, AT Your Service...
 							</p>
 						</div>
 						<div className="flex h-10 gap-4">
@@ -109,6 +109,9 @@ const About: FC = () => {
 };
 
 const FadeInWhenVisible: FC<PropsWithChildren> = ({ children }) => {
+	if (window.innerWidth < 1024) {
+		return <div>{children}</div>;
+	}
 	return (
 		<motion.div
 			initial="hidden"

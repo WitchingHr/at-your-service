@@ -44,7 +44,7 @@ const Header: FC = () => {
 					className={`py-5 px-5 sm:py-8 sm:px-[8%] max-w-[1440px] flex items-center justify-between mx-auto`}
 				>
 					<a href="/">
-						<div className={`text-2xl sm:text-4xl duration-300 headerFont ` + textStyle}>
+						<div className={`text-xl sm:text-3xl md:text-4xl duration-300 headerFont ` + textStyle}>
 							AT Your Service...
 						</div>
 					</a>

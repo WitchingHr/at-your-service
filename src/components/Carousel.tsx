@@ -8,8 +8,10 @@ import five from "../assets/img_5.jpeg";
 import six from "../assets/img_6.jpeg";
 import seven from "../assets/img_7.jpeg";
 import eight from "../assets/img_8.jpeg";
+import twentyone from "../assets/img_21.jpeg";
+import twentythree from "../assets/img_23.jpeg";
 
-const images = [one, two, twenty, seven, five, six, eight, nineteen];
+const images = [one, two, twenty, seven, five, six, eight, nineteen, twentyone, twentythree];
 
 const Carousel: FC = () => {
 	const [selected, setSelected] = useState<number | null>(null);

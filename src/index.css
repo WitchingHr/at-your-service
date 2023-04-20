@@ -126,7 +126,7 @@ html {
 }
 
 .work-gradient {
-  background: linear-gradient(90deg, transparent, #c9b895cc, transparent);
+  background: linear-gradient(90deg, transparent, #c9b895ab, transparent);
 }
 
 @media only screen and (max-width: 768px) {

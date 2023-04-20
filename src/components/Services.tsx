@@ -1,8 +1,8 @@
 import React, { FC, PropsWithChildren } from "react";
 import { motion } from "framer-motion";
 
-import sixteen from "../assets/img_16.jpeg";
 import fifteen from "../assets/img_15.jpeg";
+import fourteen from "../assets/img_14.jpeg";
 
 const Services: FC = () => {
 	return (
@@ -46,7 +46,7 @@ const Services: FC = () => {
 
 				<div className="flex flex-col-reverse items-center lg:flex-row">
 					<SlideInFromRightWhenVisible>
-						<img src={sixteen} alt="" className="w-full service-shadow" />
+						<img src={fourteen} alt="" className="w-full service-shadow" />
 					</SlideInFromRightWhenVisible>
 					<SlideInFromLeftWhenVisible>
 						<div className="flex flex-col gap-3 px-10 py-8 bg-indigo-300 md:py-10 md:px-14 service-shadow">
@@ -83,6 +83,10 @@ const Services: FC = () => {
 };
 
 const SlideInFromLeftWhenVisible: FC<PropsWithChildren> = ({ children }) => {
+	if (window.innerWidth < 1024) {
+		return <div className="lg:w-3/6 shrink-0">{children}</div>;
+	}
+
 	return (
 		<motion.div
 			initial="hidden"
@@ -100,6 +104,10 @@ const SlideInFromLeftWhenVisible: FC<PropsWithChildren> = ({ children }) => {
 };
 
 const SlideInFromRightWhenVisible: FC<PropsWithChildren> = ({ children }) => {
+	if (window.innerWidth < 1024) {
+		return <div className="lg:w-3/6 shrink-0">{children}</div>;
+	}
+
 	return (
 		<motion.div
 			initial="hidden"

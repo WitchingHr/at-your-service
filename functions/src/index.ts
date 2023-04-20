@@ -14,7 +14,7 @@ export const newJob = functions.firestore.document("jobs/{jobId}")
     const jobSnap = await db.collection("jobs").doc(context.params.jobId).get();
     const data = jobSnap.data() || {};
     const msg = {
-      to: "matt1494@gmail.com",
+      to: "atyourservice603@gmail.com",
       from: "atyourservice603mail@gmail.com",
       templateId: TEMPLATE_ID,
       dynamic_template_data: {

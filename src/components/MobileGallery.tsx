@@ -16,10 +16,13 @@ import five from "../assets/img_5.jpeg";
 import six from "../assets/img_6.jpeg";
 import seven from "../assets/img_7.jpeg";
 import eight from "../assets/img_8.jpeg";
+import twentyone from "../assets/img_21.jpeg";
+import twentythree from "../assets/img_23.jpeg";
 
-const images = [one, two, twenty, seven, five, six, eight, nineteen];
+const images = [one, two, twenty, seven, five, six, eight, nineteen, twentyone, twentythree];
 const images1 = [one, two, twenty, seven];
 const images2 = [five, six, eight, nineteen];
+const images3 = [twentyone, twentythree];
 
 const MobileGallery: FC = () => {
 	const [page, setPage] = useState<number>(1);
@@ -28,17 +31,17 @@ const MobileGallery: FC = () => {
 	const gridRef = useRef<HTMLDivElement>(null);
 
 	function handleSwipeLeft() {
-		if (pageRef.current === 2) return;
-		pageRef.current = 2;
-		movePage(1);
-		setPage(2);
+		if (pageRef.current === 3) return;
+		pageRef.current = pageRef.current + 1;
+		movePage(pageRef.current - 1);
+		setPage(p => p + 1);
 	}
 
 	function handleSwipeRight() {
 		if (pageRef.current === 1) return;
-		pageRef.current = 1;
-		movePage(0);
-		setPage(1);
+		pageRef.current = pageRef.current - 1;
+		movePage(pageRef.current - 1);
+		setPage(p => p - 1);
 	}
 
 	function movePage(pageIndex: number) {
@@ -46,8 +49,8 @@ const MobileGallery: FC = () => {
 		gridRef.current.style.transform = `translateX(${-pageIndex * 100}%)`;
 	}
 
-	const rightStyle = page === 1 ? "opacity-100" : "opacity-50";
-	const leftStyle = page === 2 ? "opacity-100" : "opacity-50";
+	const rightStyle = page !== 3 ? "opacity-100" : "opacity-50";
+	const leftStyle = page !== 1 ? "opacity-100" : "opacity-50";
 
 	useEffect(() => {
 		if (!containerRef.current) return;
@@ -100,6 +103,21 @@ const MobileGallery: FC = () => {
 									key={index}
 									className="w-full h-full image-mobile"
 									onClick={() => handleImageClick(index + 4)}
+								/>
+							))}
+						</div>
+					</div>
+					<div id="page-3" className="min-w-full">
+						<div
+							className="grid grid-cols-2 grid-rows-2 gap-7 px-7"
+						>
+							{images3.map((image, index) => (
+								<img
+									src={image}
+									alt=""
+									key={index}
+									className="w-full h-full image-mobile"
+									onClick={() => handleImageClick(index + 8)}
 								/>
 							))}
 						</div>
